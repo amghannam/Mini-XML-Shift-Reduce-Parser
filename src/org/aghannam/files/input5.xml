@@ -1,0 +1,16 @@
+<level>
+  <tilesets>
+    <tileset id='0' filename='ts1.png' tilesize='16' />
+    <tileset id='0' filename='ts2.png' tilename='16' />
+  </tilesets>
+  <map width='2' height='2' tilesize='16'>
+    <r>
+      <c s='0' t='0' />
+      <c s='0' t='1' />
+    </r>
+    <r>
+      <c s='1' t='0' />
+      <c s='1' t='1' />
+    </r>
+  </map>
+</level>
