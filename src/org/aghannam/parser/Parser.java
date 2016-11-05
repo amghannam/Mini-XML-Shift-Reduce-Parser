@@ -212,7 +212,7 @@ public class Parser {
 	 * left-hand side nonterminal into the parse stack.
 	 * <p>
 	 * The number of symbols to pop off the stack is known from the parse table for the grammar, as is the corresponding
-	 * left-hand side nonterminal. A reduction simply updates the parse tack and does not advance the input stream. 
+	 * left-hand side nonterminal. A reduction simply updates the parse stack and does not advance the input stream. 
 	 * At least one right-hand side symbol must be popped. For this reason, this method cannot be used to reduce by
 	 * EPSILON rules and will fail if such a call is made. 
 	 * 
@@ -245,7 +245,7 @@ public class Parser {
 	 * <p>
 	 * When a non-epsilon reduce operation is underway, the removal of right-hand side symbols exposes some old state 
 	 * at the top of the stack. This exposed state represents the row at which to find the next appropriate action, which is 
-	 * found at the column corresponding to the nonterminal pushed into the parse stack at the end of a reduction. 
+	 * located at the column corresponding to the nonterminal pushed into the parse stack at the end of a reduction. 
 	 * <p>
 	 * This method is used internally by <code>reduce()</code> whenever a reduction has been applied. 
 	 * @param row the row number at which to lookup the next state
