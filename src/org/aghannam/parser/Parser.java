@@ -68,7 +68,7 @@ public class Parser {
 	private ArrayList<Token> tokens;
 	private HashSet<String> attributeNames;
 	private Token lookahead;
-	private int command;
+	private int currentState;
 	private boolean isValid;
 	private boolean complete;
 	private String gotoTable[][]; 
@@ -82,7 +82,7 @@ public class Parser {
 		states = new Stack<Integer>();  // used to determine the next parse state at any given 
 		tagNames = new Stack<String>(); // to ensure that corresponding tag names match 
 		attributeNames = new HashSet<String>(); // to ensure no duplicate attribute names within a tag
-		command = -1; // holds the current parse state
+		currentState = -1; // holds the current parse state
 		isValid = true; // whether or not the input document is a well-formed XML-- file
 		complete = false; // success or failure 
 		initializeGotoTable(); 
@@ -354,11 +354,11 @@ public class Parser {
 	 */
 	private void parse() throws ParserException {
 		if (states.isEmpty()) {
-			command = -1;
+			currentState = -1;
 		} else {
-			command = states.peek(); // state continually changes as the parser progresses 
+			currentState = states.peek(); // state continually changes as the parser progresses 
 		}
-		switch (command) {
+		switch (currentState) {
 		case 0:
 			s0();
 			break;
