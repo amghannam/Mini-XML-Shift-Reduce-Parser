@@ -1,0 +1,25 @@
+<!--  Edited by XMLSpy -->
+<CATALOG>
+    <breakfast-food
+	name = 'Belgian Waffles'
+	price = '$5.95'
+	description = 'two famous Belgian Waffles with plenty of real maple syrup'
+	calories = '650'
+    />
+    <PLANT
+	COMMON = 'Buttercup'
+	BOTANICAL = 'Ranunculus'
+	ZONE = '4'
+	LIGHT = 'Shade'
+	PRICE = '$2.57'
+	AVAILABILITY = '061099'
+    />
+    <CD
+	TITLE = 'Private Dancer' 
+	ARTIST = 'Tina Turner' 
+	COUNTRY = 'UK' 
+	COMPANY = 'Capitol' 
+	PRICE = '&#163;8.90' 
+	YEAR = '1983'
+    />
+</CATALOG>
