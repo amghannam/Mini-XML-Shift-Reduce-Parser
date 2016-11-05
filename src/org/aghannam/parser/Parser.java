@@ -191,7 +191,7 @@ public class Parser {
 	}
 	
 	/**
-	 * Shifts the given token into the parse stack and goes to the specified state.
+	 * Pushes the given token into the parse stack and goes to the specified state.
 	 * <p>
 	 * Per the algorithm, a shift operation involves pushing a terminal into the stack and then advancing 
 	 * the input stream by one token. Accordingly, this method updates both the symbol stack and the state stack,
