@@ -1,0 +1,25 @@
+<!--  Edited by XMLSpy --> 
+<CATALOG>
+    <breakfast-food>
+	<name>Belgian Waffles</name>
+	<price>$5.95</price>
+	<description>two famous Belgian Waffles with plenty of real maple syrup</description>
+	<calories>650</calories>
+    </breakfast-food>
+    <PLANT>
+	<COMMON>Buttercup</COMMON>
+	<BOTANICAL>Ranunculus</BOTANICAL>
+	<ZONE>4</ZONE>
+	<LIGHT>Shade</LIGHT>
+	<PRICE>$2.57</PRICE>
+	<AVAILABILITY>061099</AVAILABILITY>
+    </PLANT>
+    <CD>
+	<TITLE>Private Dancer</TITLE> 
+	<ARTIST>Tina Turner</ARTIST> 
+	<COUNTRY>UK</COUNTRY> 
+	<COMPANY>Capitol</COMPANY> 
+	<PRICE>&#163;8.90</PRICE> 
+	<YEAR>1983</YEAR> 
+    </CD>
+</CATALOG>
