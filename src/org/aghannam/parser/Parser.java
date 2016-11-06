@@ -21,7 +21,7 @@ import org.aghannam.lex.Lexer.TokenType;
  * <p>
  * s'            ::=    document <br>
  * document      ::= 	element <br>
- * element 		 ::= 	< elementPrefix <br>
+ * element       ::= 	< elementPrefix <br>
  * elementPrefix ::= 	NAME attribute elementSuffix <br>
  * attribute 	 ::= 	attribute NAME = STRING<br>
  * attribute 	 ::= 	EPSILON <br>
@@ -30,7 +30,7 @@ import org.aghannam.lex.Lexer.TokenType;
  * elementOrData ::= 	elementOrData element <br>
  * elementOrData ::= 	elementOrData DATA <br>
  * elementOrData ::=    EPSILON <br>
- * endTag 		 ::=    &lt;/ NAME > <br>
+ * endTag 	 ::=    &lt;/ NAME > <br>
  * <p>
  * The parser verifies if a given XML-- file is syntactically correct according to the above grammar, in 
  * which case it prints out a rightmost derivation in reverse order with one grammar rule displayed per line. 
