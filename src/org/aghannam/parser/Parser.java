@@ -248,6 +248,7 @@ public class Parser {
 	 * located at the column corresponding to the nonterminal pushed into the parse stack at the end of a reduction. 
 	 * <p>
 	 * This method is used internally by <code>reduce()</code> whenever a reduction has been applied. 
+	 *
 	 * @param row the row number at which to lookup the next state
 	 * @param column the nonterminal column number at which to lookup the next state
 	 * @return the next state to which to advance after a successful reduction 
