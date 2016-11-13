@@ -79,7 +79,7 @@ public class Parser {
 	 */
 	private void init() {
 		symbols = new Stack<String>();  // used to hold grammar symbols (terminals and nonterminals) 
-		states = new Stack<Integer>();  // used to determine the next parse state at any given 
+		states = new Stack<Integer>();  // used to determine the next parse state at any given time
 		tagNames = new Stack<String>(); // to ensure that corresponding tag names match 
 		attributeNames = new HashSet<String>(); // to ensure no duplicate attribute names within a tag
 		currentState = -1; // holds the current parse state
