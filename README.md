@@ -66,7 +66,7 @@ document ::= element
 
 Document parsed successfully!
 ```
-This confirms the file is a valid document that can be generated from the specified grammar. Note the bottom-up derivation, ending with the start symbol. 
+This confirms the file is a valid document that can be generated from the specified grammar. Note the bottom-up structure of the output, which is a rightmost derivation that ends with the start symbol (the root of the parse tree). 
 
 ## Help 
 
