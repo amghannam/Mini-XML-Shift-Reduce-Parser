@@ -1,4 +1,4 @@
-## Mini-XML-Shift-Reduce-Parser
+## Mini-XML Shift-Reduce Parser
 This program implements a shift-reduce parser for a fictional subset of XML. The LR(1) grammar recognized by the parser is the following:
 
 ```
@@ -14,7 +14,19 @@ elementOrData ::= elementOrData element
 elementOrData ::= elementOrData DATA
 elementOrData ::= EPSILON
 ```
-Where the tokens/terminal symbols are ```NAME```, ```STRING```, ```DATA```, ```<```, ```>```, ```</```, ```/>```, and ```=```. The grammar is left-recursive and is augmented by the special start symbol ```s'``` which is not printed in the final derivation. (That is to say, ```document``` is the actual start symbol.) 
+
+The grammar can also be rewritten in Extended BNF form as follows:
+
+```
+document  ::=  element
+element   ::=  start_tag (element | DATA)* end_tag | empty_tag
+start_tag ::=  < NAME attribute* >
+end_tag   ::=  </ NAME >
+empty_tag ::=  < NAME attribute* />
+attribute ::=  NAME = STRING
+```
+
+Where the tokens/terminal symbols are ```NAME```, ```STRING```, ```DATA```, ```<```, ```>```, ```</```, ```/>```, and ```=```. The LR(1) grammar is left-recursive and is augmented by the special start symbol ```s'``` which is not printed in the final derivation. (That is to say, ```document``` is the actual start symbol.) 
 
 ## How to Run
 
