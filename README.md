@@ -1,5 +1,5 @@
 ## Mini-XML Shift-Reduce Parser
-This program implements a shift-reduce parser for a fictional subset of XML. The LR(1) grammar recognized by the parser is the following:
+This program implements a shift-reduce (aka bottom-up) parser for a fictional subset of XML. The LR(1) grammar recognized by the parser is the following:
 
 ```
 s' ::= document
