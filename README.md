@@ -24,7 +24,7 @@ Because all the input files reside within the project directory, it is best to r
 
 Given an XML document, the parser verifies if the document can be generated from the above grammar, in which case it prints out a rightmost derivation, in reverse order, that corresponds to a parse tree that generates the given input token sequence. This sequence is produced by the lexer, which tokenizes the input XML document into meaningful symbols (i.e. tokens). The derivation consists of the collection of grammar rules used to generate the input document, where each line displays exaclty one grammar rule. 
 
-#### Example test case 
+### Example test case 
 
 Consider the following (tiny) XML file:
 
