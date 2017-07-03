@@ -212,24 +212,7 @@ public class Parser {
 			System.err.println("Fatal error while parsing...");
 		}
 	}
-
-	/**
-	 * Advances by one token and sets the lookahead to be the next token in the
-	 * input token stream.
-	 * <p>
-	 * This method is called frequently by <code>shift()</code>, whenever a
-	 * terminal has been pushed into the parse stack.
-	 */
-	private void nextToken() {
-		tokens.remove(0);
-
-		if (tokens.isEmpty()) {
-			lookahead = new Token(TokenType.EOF, "&$");
-		} else {
-			lookahead = tokens.get(0);
-		}
-	}
-
+	
 	/**
 	 * Pushes the given token into the parse stack and goes to the specified
 	 * state.
@@ -249,6 +232,23 @@ public class Parser {
 		symbols.push(token);
 		states.push(state);
 		nextToken();
+	}
+
+	/**
+	 * Advances by one token and sets the lookahead to be the next token in the
+	 * input token stream.
+	 * <p>
+	 * This method is called frequently by <code>shift()</code>, whenever a
+	 * terminal has been pushed into the parse stack.
+	 */
+	private void nextToken() {
+		tokens.remove(0);
+
+		if (tokens.isEmpty()) {
+			lookahead = new Token(TokenType.EOF, "&$");
+		} else {
+			lookahead = tokens.get(0);
+		}
 	}
 
 	/**
@@ -292,7 +292,7 @@ public class Parser {
 
 	/**
 	 * Consults the GOTO table to deduce the next state to go to following a
-	 * successful reduce operation.
+	 * successful reduction step.
 	 * <p>
 	 * When a non-epsilon reduce operation is underway, the removal of
 	 * right-hand side symbols exposes some old state at the top of the stack.
